@@ -3,6 +3,7 @@ import { promisify } from 'util';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as os from 'os';
+import { fileURLToPath } from 'url';
 
 const execPromise = promisify(exec);
 const execFilePromise = promisify(execFile);
@@ -354,7 +355,12 @@ export class AdbManager {
   private findAdb(): void {
     const exeDir = path.dirname(process.execPath);
     const cwd = process.cwd();
-    const appDir = __dirname;
+    let appDir = '';
+    try {
+      if (typeof import.meta !== 'undefined' && import.meta.url) {
+        appDir = path.dirname(fileURLToPath(import.meta.url));
+      }
+    } catch {}
     const localAppData = process.env.LOCALAPPDATA || (os.homedir ? path.join(os.homedir(), 'AppData', 'Local') : '');
 
     const candidates = [
@@ -362,8 +368,8 @@ export class AdbManager {
       path.join(exeDir, 'adb.exe'),
       path.join(cwd, 'bin', 'adb.exe'),
       path.join(cwd, 'adb.exe'),
-      path.join(appDir, '..', 'bin', 'adb.exe'),
-      path.join(appDir, 'bin', 'adb.exe'),
+      appDir ? path.join(appDir, '..', 'bin', 'adb.exe') : '',
+      appDir ? path.join(appDir, 'bin', 'adb.exe') : '',
       localAppData ? path.join(localAppData, 'LogicSpine', 'AWMS', 'bin', 'adb.exe') : '',
       'C:\\Users\\Pryanshu Sharma\\Documents\\ADB\\android-sdk-platform-tools-adb-37-0-1\\platform-tools\\adb.exe'
     ].filter(Boolean);
