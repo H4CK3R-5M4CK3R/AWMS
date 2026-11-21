@@ -1,0 +1,35 @@
+{
+  "name": "awms",
+  "version": "0.1.1",
+  "description": "AWMS by LogicSpine - Android Web Management Service & MCP Server",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "awms": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "build:bundle": "esbuild src/index.ts --bundle --platform=node --target=node20 --format=cjs --outfile=dist/bundle.cjs",
+    "build:exe": "npm run build && npm run build:bundle && node scripts/build-exe.mjs",
+    "mcp": "tsx src/mcp-runner.ts",
+    "preview": "node dist/index.js"
+  },
+  "keywords": ["android", "adb", "mcp", "ai", "web-management", "wireless-adb", "screen-mirror", "logicspine"],
+  "author": "LogicSpine",
+  "license": "Custom: LogicSpine Open Attribution License",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "ws": "^8.23.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/ws": "^8.18.2",
+    "esbuild": "^0.28.2",
+    "postject": "^1.0.0-alpha.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
