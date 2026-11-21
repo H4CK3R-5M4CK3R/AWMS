@@ -1,6 +1,6 @@
-# AWMS by LogicSpine — Android Web Management Service (v0.1.1)
+# AWMS by [LogicSpine](https://logicspine.in) — Android Web Management Service (v0.1.1)
 
-**AWMS** is an autonomous Android device management engine and **Model Context Protocol (MCP)** server running on static port `7171`, created by **LogicSpine**.
+**AWMS** is an autonomous Android device management engine and **Model Context Protocol (MCP)** server running on static port `7171`, created by [**LogicSpine**](https://logicspine.in).
 
 It provides:
 1. **Interactive Web Dashboard** (`http://127.0.0.1:7171`): Hardware-accelerated H.264 screen mirroring (30–60 FPS), touch/drag control, quality presets, 1-click wireless USB-to-Wi-Fi magic switch, APK installer, criss-cross file explorer, app manager, and terminal console.
@@ -185,7 +185,7 @@ d:/LogicSpine/Awms/
 
 ## ⚖️ Creator Attribution & License
 
-Developed by **LogicSpine**.
+Developed by [**LogicSpine**](https://logicspine.in).
 
 This software is free to use, modify, and distribute.
-**Attribution Requirement**: You must retain creator credit to **LogicSpine** in all copies, forks, distributions, and derivative works. See the LICENSE file for full terms.
+**Attribution Requirement**: You must retain creator credit to [**LogicSpine**](https://logicspine.in) in all copies, forks, distributions, and derivative works. See the `LICENSE` file for full terms.

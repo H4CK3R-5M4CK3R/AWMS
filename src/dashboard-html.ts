@@ -1009,8 +1009,8 @@ Developed by LogicSpine. Attribution required when sharing or modifying.</pre>
           <!-- LogicSpine Copyright & Attribution Policy -->
           <div style="padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.76rem; color: var(--text-dim); display: flex; align-items: center; justify-content: space-between; flex-wrap: gap;">
             <div>
-              <span style="color: #60a5fa; font-weight: 600;">AWMS by LogicSpine</span> • Free to use and modify.<br>
-              Creator Attribution Policy: You must retain credit to <b>LogicSpine</b> in all forks, distributions, and derivative works.
+              <a href="https://logicspine.in" target="_blank" style="color: #60a5fa; font-weight: 600; text-decoration: none;">AWMS by LogicSpine</a> • Free to use and modify.<br>
+              Creator Attribution Policy: You must retain credit to <a href="https://logicspine.in" target="_blank" style="color: #60a5fa; text-decoration: underline;"><b>LogicSpine</b></a> in all forks, distributions, and derivative works.
             </div>
             <div style="font-family: monospace; color: #94a3b8;">
               awms.0.1.1.exe (Portable)
